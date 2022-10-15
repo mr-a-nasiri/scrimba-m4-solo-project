@@ -1,0 +1,35 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Style */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #ededed;
+}
+
+/* Header */
+#main-header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid red;
+  margin-bottom: 5px;
+}
+
+#logo {
+  width: 130px;
+}
+
+#user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Section: Posts */
