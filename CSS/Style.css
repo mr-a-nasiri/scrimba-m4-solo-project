@@ -60,6 +60,7 @@ body {
 .post-wrapper {
   background-color: var(--bg-primary);
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 /* Posts Header */
@@ -90,4 +91,49 @@ body {
 .likes-count {
   display: inline-block;
   margin: 0.75rem 0;
+}
+/* --------------------------------------------------------- */
+
+.image-middle-like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 100px;
+  display: none;
+  animation: like-fade-out 0.8s ease-out forwards;
+}
+
+@keyframes like-fade-out {
+  0% {
+    font-size: 0;
+    opacity: 0;
+  }
+
+  20% {
+    font-size: 100px;
+    opacity: 100;
+  }
+
+  30% {
+    font-size: 60px;
+    opacity: 100;
+  }
+
+  40% {
+    font-size: 100px;
+    opacity: 100;
+  }
+
+  80% {
+    font-size: 100px;
+    opacity: 100;
+  }
+
+  100% {
+    font-size: 0;
+    opacity: 0;
+  }
 }

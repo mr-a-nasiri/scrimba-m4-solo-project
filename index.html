@@ -15,53 +15,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/Style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 768px)"
+      href="css/widescreen.css"
+    />
     <title>Oldagram</title>
   </head>
   <body>
-    <!-- Main Header -->
-    <header id="main-header" class="p-1 round-border">
-      <img
-        id="logo"
-        class="pointer"
-        src="images/logo.png"
-        alt="oldagram logo"
-      />
-      <img
-        class="avatar-img pointer"
-        src="images/user-avatar.jpg"
-        alt="user avatar"
-      />
-    </header>
-    <!-- Section: Post -->
-    <!-- Post Header -->
-    <section class="post-wrapper round-border">
-      <div class="post-header p-1">
+    <div id="screen" class="wide-screen">
+      <!-- Main Header -->
+      <header id="main-header" class="p-1 round-border">
+        <img
+          id="logo"
+          class="pointer"
+          src="images/logo.png"
+          alt="oldagram logo"
+        />
         <img
           class="avatar-img pointer"
-          src="images/avatar-vangogh.jpg"
-          alt="vangogh avatar"
+          src="images/user-avatar.jpg"
+          alt="user avatar"
         />
-        <div>
-          <p class="user-full-name bold pointer">Vincent van Gogh</p>
-          <p class="post-location pointer">Zudert, Netherlands</p>
-        </div>
-      </div>
-      <!-- Post Image -->
-      <img class="post-img" src="images/post-vangogh.jpg" alt="post image" />
-      <!-- Post Icons, Likes, Caption -->
-      <div class="p-1">
-        <div class="post-icon">
-          <i class="fa-regular fa-heart pointer"></i>
-          <i class="fa-regular fa-comment pointer"></i>
-          <i class="fa-regular fa-share-from-square pointer"></i>
-        </div>
-        <span class="likes-count bold pointer">21,492 likes</span>
-        <p class="user-caption">
-          <span class="user-name bold pointer">vincey1853</span> just took a few
-          mushrooms lol
-        </p>
-      </div>
-    </section>
+      </header>
+    </div>
+
     <!-- JS SRC -->
     <script src="JavaScript/Script.js"></script>
   </body>
