@@ -3,31 +3,42 @@
   --bg-primary: #fff;
 }
 
-/* Reset */
+/* Reset -------------------------------------------- */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* General Style */
+/* General Style -------------------------------------------- */
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #ededed;
 }
 
-/* Utility Classes */
+/* Utility Classes ------------------------------------------ */
 .p-1 {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+}
+.py-1 {
+  padding: 0.5 0;
 }
 
-/* Header */
+.bold {
+  font-weight: 700;
+}
+
+.round-border {
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Header -------------------------------------------------- */
 #main-header {
   background-color: var(--bg-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   margin-bottom: 2px;
 }
 
@@ -41,14 +52,29 @@ body {
   border-radius: 50%;
 }
 
-/* Section: Posts */
+/* Section: Posts -------------------------------------------- */
 .post-wrapper {
   background-color: var(--bg-primary);
+  margin-bottom: 1.5rem;
 }
 
+/* Posts Header */
 .post-header {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  border: 1px solid red;
+}
+/* Post Image */
+.post-img {
+  width: 100%;
+}
+/* Post Icons, Likes, Caption */
+.post-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.75rem;
+}
+
+.likes-count {
+  margin: 0.75rem 0;
 }
