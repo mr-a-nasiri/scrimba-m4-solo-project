@@ -33,6 +33,10 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Header -------------------------------------------------- */
 #main-header {
   background-color: var(--bg-primary);
@@ -70,11 +74,20 @@ body {
 }
 /* Post Icons, Likes, Caption */
 .post-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.fa-regular {
+  font-size: 30px; /* fa-regular is a class for icons */
+}
+.fa-regular:hover,
+.fa-regular:active {
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
 }
 
 .likes-count {
+  display: inline-block;
   margin: 0.75rem 0;
 }

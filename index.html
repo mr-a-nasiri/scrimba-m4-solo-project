@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/fe57c98e23.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,39 +20,44 @@
   <body>
     <!-- Main Header -->
     <header id="main-header" class="p-1 round-border">
-      <img id="logo" src="images/logo.png" alt="oldagram logo" />
-      <img class="avatar-img" src="images/user-avatar.jpg" alt="user avatar" />
+      <img
+        id="logo"
+        class="pointer"
+        src="images/logo.png"
+        alt="oldagram logo"
+      />
+      <img
+        class="avatar-img pointer"
+        src="images/user-avatar.jpg"
+        alt="user avatar"
+      />
     </header>
     <!-- Section: Post -->
     <!-- Post Header -->
     <section class="post-wrapper round-border">
       <div class="post-header p-1">
         <img
-          class="avatar-img"
+          class="avatar-img pointer"
           src="images/avatar-vangogh.jpg"
           alt="vangogh avatar"
         />
         <div>
-          <p class="user-full-name bold">Vincent van Gogh</p>
-          <p class="post-location">Zudert, Netherlands</p>
+          <p class="user-full-name bold pointer">Vincent van Gogh</p>
+          <p class="post-location pointer">Zudert, Netherlands</p>
         </div>
       </div>
       <!-- Post Image -->
       <img class="post-img" src="images/post-vangogh.jpg" alt="post image" />
       <!-- Post Icons, Likes, Caption -->
       <div class="p-1">
-        <div>
-          <img class="post-icon" src="images/icon-heart.png" alt="like post " />
-          <img
-            class="post-icon"
-            src="images/icon-comment.png"
-            alt="like post "
-          />
-          <img class="post-icon" src="images/icon-dm.png" alt="like post " />
+        <div class="post-icon">
+          <i class="fa-regular fa-heart pointer"></i>
+          <i class="fa-regular fa-comment pointer"></i>
+          <i class="fa-regular fa-share-from-square pointer"></i>
         </div>
-        <p class="likes-count">21,492 likes</p>
+        <span class="likes-count bold pointer">21,492 likes</span>
         <p class="user-caption">
-          <span class="user-name bold">vincey1853</span> just took a few
+          <span class="user-name bold pointer">vincey1853</span> just took a few
           mushrooms lol
         </p>
       </div>
