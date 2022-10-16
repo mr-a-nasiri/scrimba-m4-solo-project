@@ -38,7 +38,7 @@ function renderPage() {
   let renderedPosts = "";
   for (let i = 0; i < posts.length; i++) {
     renderedPosts += `
-      <section class="post-wrapper round-border">
+      <section class="post-wrapper round-border box-shadow wide-screen">
   
         <div class="post-header p-1">
   
