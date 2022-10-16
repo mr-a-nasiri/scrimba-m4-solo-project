@@ -62,12 +62,12 @@ function renderPage() {
         <div class="p-1">
   
           <div class="post-icon">
-            <i class="fa-regular fa-heart pointer"></i>
-            <i class="fa-regular fa-comment pointer"></i>
-            <i class="fa-regular fa-share-from-square pointer"></i>
+            <i class="fa-regular fa-heart pointer like-button button"></i>
+            <i class="fa-regular fa-comment pointer button"></i>
+            <i class="fa-regular fa-share-from-square pointer button"></i>
           </div>
   
-          <span class="likes-count bold pointer">${posts[i].likes} likes</span>
+          <p class="likes bold pointer"><span class="likes-count">${posts[i].likes}</span> likes</p>
   
           <p class="user-caption">
             <span class="user-name bold pointer">${posts[i].username}</span> ${posts[i].caption}
@@ -78,21 +78,56 @@ function renderPage() {
       </section>
     `;
   }
-
-  // Like by double clicking on the images
+  // Looping through posts for adding event listener
   for (let i = 0; i < posts.length; i++) {
+    // Getting DOM of the post image for adding event listener
     const postImg = document.getElementsByClassName("post-img")[i];
+
     const imageMiddleLike =
       document.getElementsByClassName("image-middle-like")[i];
 
+    let dblClicked = false;
     postImg.addEventListener("dblclick", function () {
       imageMiddleLike.style.display = "block";
+      likeButton.className = "fa-solid fa-heart pointer like-button button";
+      if (dblClicked === false && likeButtonClick === false) {
+        posts[i].likes++;
+        likesCount.textContent++;
+        dblClicked = true;
+      }
       setTimeout(() => {
         // removes element from DOM after given time
         // so we can re run the action
         imageMiddleLike.style.display = "none";
       }, 1000);
     });
+
+    // Getting DOM of the like button for adding event listener
+    const likeButton = document.getElementsByClassName("like-button")[i];
+    const likesCount = document.getElementsByClassName("likes-count")[i];
+    let likeButtonClick = false;
+    likeButton.addEventListener("click", function () {
+      if (
+        likeButton.className == "fa-regular fa-heart pointer like-button button"
+      ) {
+        likeButton.className = "fa-solid fa-heart pointer like-button button";
+        posts[i].likes++;
+        likesCount.textContent++;
+        likeButtonClick = true;
+      } else {
+        likeButton.className = "fa-regular fa-heart pointer like-button button";
+        posts[i].likes--;
+        likesCount.textContent--;
+        likeButtonClick = false;
+        dblClicked = false;
+      }
+    });
+
+    if (
+      likeButton.className == "fa-solid fa-heart pointer like-button button"
+    ) {
+      renderPage();
+    }
   }
 }
 renderPage();

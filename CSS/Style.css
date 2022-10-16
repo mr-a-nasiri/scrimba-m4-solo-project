@@ -79,16 +79,16 @@ body {
   gap: 1rem;
 }
 
-.fa-regular {
-  font-size: 30px; /* fa-regular is a class for icons */
+.button {
+  font-size: 30px;
 }
-.fa-regular:hover,
-.fa-regular:active {
+.button:hover,
+.button:active {
   opacity: 0.5;
   transition: all 0.2s ease-in-out;
 }
 
-.likes-count {
+.likes {
   display: inline-block;
   margin: 0.75rem 0;
 }
