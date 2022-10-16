@@ -91,7 +91,8 @@ function renderPage() {
     let dblClicked = false;
     postImg.addEventListener("dblclick", function () {
       imageMiddleLike.style.display = "block";
-      likeButton.className = "fa-solid fa-heart pointer like-button button";
+      likeButton.className =
+        "fa-solid fa-heart pointer like-button button like-filled";
       if (dblClicked === false && likeButtonClick === false) {
         posts[i].likes++;
         likesCount.textContent++;
@@ -112,7 +113,8 @@ function renderPage() {
       if (
         likeButton.className == "fa-regular fa-heart pointer like-button button"
       ) {
-        likeButton.className = "fa-solid fa-heart pointer like-button button";
+        likeButton.className =
+          "fa-solid fa-heart pointer like-button button like-filled";
         posts[i].likes++;
         likesCount.textContent++;
         likeButtonClick = true;
@@ -126,7 +128,8 @@ function renderPage() {
     });
 
     if (
-      likeButton.className == "fa-solid fa-heart pointer like-button button"
+      likeButton.className ==
+      "fa-solid fa-heart pointer like-button button like-filled"
     ) {
       renderPage();
     }

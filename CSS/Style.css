@@ -89,11 +89,18 @@ body {
 }
 
 .likes {
+  /* count */
   display: inline-block;
   margin: 0.75rem 0;
 }
-/* --------------------------------------------------------- */
 
+.like-filled {
+  color: #ed4956;
+  transition: color 0.5s;
+  animation: like-filled 0.3s ease-out;
+}
+
+/* Like icon middle of the post ----------------------------------------------- */
 .image-middle-like {
   position: absolute;
   top: 50%;
@@ -106,6 +113,8 @@ body {
   animation: like-fade-out 0.8s ease-out forwards;
 }
 
+/* Keyframes */
+/* Middle post like */
 @keyframes like-fade-out {
   0% {
     font-size: 0;
@@ -137,3 +146,17 @@ body {
     opacity: 0;
   }
 }
+
+/* Like icon */
+@keyframes like-filled {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* --------------------------------------------------------- */
