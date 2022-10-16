@@ -35,8 +35,9 @@ const screen = document.getElementById("screen");
 
 function renderPage() {
   // Render Posts
+  let renderedPosts = "";
   for (let i = 0; i < posts.length; i++) {
-    screen.innerHTML += `
+    renderedPosts += `
       <section class="post-wrapper round-border">
   
         <div class="post-header p-1">
@@ -78,6 +79,7 @@ function renderPage() {
       </section>
     `;
   }
+  screen.innerHTML += renderedPosts;
   // Looping through posts for adding event listener
   for (let i = 0; i < posts.length; i++) {
     // Getting DOM of the post image for adding event listener
